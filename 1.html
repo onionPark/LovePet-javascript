@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LovePet-강아지</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5103CF10T"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-R5103CF10T');
+        </script>
+        
+        <link rel="stylesheet" href="style.css">
+
+        <script src="color.js"></script>
+    </head>
+
+    <body>
+        <h1><a href="index.html" target="_blank">LovePet</a></h1>
+        <input type="button" value="night" onclick="NightDayHandler(this)">
+        <div id="grid">
+            <ol>
+                <li><a href="1.html" target="_blank">강아지</a></li>
+                <li><a href="2.html" target="_blank">고양이</a></li>
+                <li><a href="3.html" target="_blank">그 외 동물들</a></li>
+            </ol>
+
+            <div id="article">
+                <p>이 강아지는 <strong><u>우리집 감자</u></strong>이며 포메입니다. 아주 귀엽죠? 자랑글 맞아요.</p>
+                <img src="gamja.jpg" width="100%">
+                <p>이 강아지는 소녀의행성이란 채널의 포메 '행성이'입니다. 너무 귀여워서 가져와봤어요!</p>
+                <p><iframe width="486" height="273" src="https://www.youtube.com/embed/qMGxYRBSZDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                <p>
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://lovepet.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </p>
+            </div>
+        </div>
+
+
+    </body>
+</html>

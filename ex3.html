@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var coworkers = {
+                "programmer" : "egoing",
+                "designer" : "leezche"
+            };
+            //#1
+            document.write("programmer : "+ coworkers.programmer+"<br>");
+            document.write("designer : "+ coworkers.designer+"<br>");
+            coworkers.bookkeeper = "duru";
+            coworkers["data scientist"]="taeho"; //이름에 공백이 있을 때
+            document.write("designer : "+ coworkers.designer+"<br>");
+            document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+            //
+        </script>
+        <h2>Iterate</h2>
+        <script>
+            for(var key in coworkers){
+                document.write(key+'<br>');
+            }
+            //#1부분과 똑같은 의미지만 코드가 간결해짐
+            for(var key in coworkers){
+                document.write(key+" : "+coworkers[key]+'<br>');
+            }
+        </script>
+        <h2>Property & Method</h2>
+        <script>
+            //개체에 소속된 변수의 값으로 함수를 지정할 수 있음
+            coworkers.showAll =  function(){
+                for(var key in this){
+                document.write(key+" : "+this[key]+'<br>');
+                }
+            }
+            //개체에 소속된 함수를 만들 수 있음(메소드)
+            coworkers.showAll();
+            //개체에 소속된 변수들(programmer, designer등)을 property라고 함
+        </script>
+    </body>
+</html>

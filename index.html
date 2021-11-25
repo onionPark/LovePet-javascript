@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LovePet</title>
+        <meta charset="UTF-8">
+        <!-- jquery 이용 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+        <!-- 구글 아날리틱스를 통해서 사이트 방문자 확인 -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5103CF10T"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-R5103CF10T');
+        </script>
+        <!-- 구글 아날리틱스를 통해서 사이트 방문자 확인 -->
+        
+        <link rel="stylesheet" href="style.css">
+        <!-- style.css의 디자인을 가져오는 문구 -->
+
+        <script src="color.js"></script>
+    </head>
+
+    <body>
+        <h1><a href="index.html">♥LovePet♥</a></h1>
+
+        <!-- night day 버튼으로 배경 글씨색 변화 -->
+        <!--
+        <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black'; 
+        document.querySelector('body').style.color = 'white'; 
+        ">
+        <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor = 'white'; 
+        document.querySelector('body').style.color = 'black'; 
+        ">
+        -->
+
+        <!-- 버튼 한방으로 night day 변화 -->
+        <input type="button" value="night" onclick="NightDayHandler(this)">
+        <div id="grid">
+            <ol>
+                <li><a href="1.html" target="_blank" class="saw" id="active">강아지</a></li>
+                <li><a href="2.html" target="_blank" class="saw">고양이</a></li>
+                <li><a href="3.html" target="_blank">그 외 동물들</a></li>
+            </ol>
+            <!--font 태그를 쓴 것
+            <ol>
+                <li><a href="1.html" target="_blank"><font color="red">강아지</font></a></li>
+                <li><a href="2.html" target="_blank"><font color="red">고양이</font></a></li>
+                <li><a href="3.html" target="_blank"><font color="red">그 외 동물들</font></a></li>
+            </ol>
+            -->
+
+            <div id="article">
+                <!-- 하이퍼 링크를 통해서 단어선택 시 웹사이트로 이동하기 -->
+                <h2><a href="https://dict.naver.com/search.nhn?dicQuery=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC&query=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC&target=dic&query_utf=&isOnlyViewEE="
+                    target="_blank" title="반려동물 어학사전">반려동물</a> 커뮤니티</h2>
+                <!-- 하이퍼 링크를 통해서 단어선택 시 웹사이트로 이동하기 -->
+                <p>이 페이지는 <strong><u>반려동물</u>을</strong>에 대한 잡다한 이야기를 다루는 웹 페이지입니다.</p>
+
+                <img src="gamja.jpg" width="100%">
+                <!-- disqus를 통해서 댓글창 달기 -->
+                <p>
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://lovepet.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </p>
+                <!-- disqus를 통해서 댓글창 달기 -->
+            </div>
+        </div>
+        
+        <!-- tawk를 이용해서 채팅창 만들기 -->
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/619cc3866885f60a50bd1e42/1fl65nid7';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+        <!--End of Tawk.to Script-->
+        <!-- tawk를 이용해서 채팅창 만들기 -->
+    </body>
+</html>
